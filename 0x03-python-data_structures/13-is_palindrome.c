@@ -40,8 +40,16 @@ int is_palindrome(listint_t **head)
 	{
 		if (second_half->n != first_half->n)
 			return (0);
-		second_half = second_half->next;
-		first_half = first_half->next;
+		if (second_half->next && first_half->next)
+		{
+			second_half = second_half->next;
+			first_half = first_half->next;
+		}
+		else
+		{
+			second_half = NULL;
+			first_half = NULL;
+		}
 	}
 	return (1);
 }
