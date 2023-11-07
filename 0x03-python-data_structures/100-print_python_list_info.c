@@ -1,17 +1,17 @@
-#include <object.h>
 #include <Python.h>
 #include <listobject.h>
+#include <sys/types.h>
 #include <stdio.h>
 
 /**
-* print_python_list_info - a C function that prints
-* some basic info about Python lists.
-* @p: a python object
-**/
+ * print_python_list_info - a C function that prints
+ * some basic info about Python lists.
+ * @p: a python object
+ **/
 
 void print_python_list_info(PyObject *p)
 {
-	long int size = PyList_Size(p);
+	Py_ssize_t size = PyList_Size(p);
 	int i;
 	PyListObject *obj = (PyListObject *)p;
 
