@@ -3,6 +3,9 @@ class Node:
     """A Class node"""
     def __init__(self, data, next_node=None):
         """Init the the node class
+        Params:
+        param1: data of end
+        param2:
         """
         self.data = data
         self.next_node = next_node
