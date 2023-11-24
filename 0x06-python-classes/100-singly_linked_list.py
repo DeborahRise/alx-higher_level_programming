@@ -58,7 +58,7 @@ class SinglyLinkedList:
         while ptr:
             prnt += str(ptr.data) + "\n"
             ptr = ptr.next_node
-        return prnt
+        return prnt[:-1]
 
     def sorted_insert(self, value):
         """a soted insetion"""
