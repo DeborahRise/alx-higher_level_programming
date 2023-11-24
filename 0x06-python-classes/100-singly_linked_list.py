@@ -2,7 +2,10 @@
 """
 A python linked list
 """
+
+
 class Node:
+
     def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = next_node
@@ -27,7 +30,9 @@ class Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+
 class SinglyLinkedList:
+
     def __init__(self):
         self.__head = None
 
@@ -38,10 +43,8 @@ class SinglyLinkedList:
             ptr = ptr.next_node
         return ""
 
-
     def sorted_insert(self, value):
         self.new_node = Node(value)
-
         if self.__head is None:
             self.__head = self.new_node
         elif self.__head.data >= self.new_node.data:
