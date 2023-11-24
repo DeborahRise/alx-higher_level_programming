@@ -52,7 +52,7 @@ class SinglyLinkedList:
 
     def __str__(self):
         """make it printable"""
-        
+
         prnt = ""
         ptr = self.__head
         while ptr:
