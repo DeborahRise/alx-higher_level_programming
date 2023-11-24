@@ -52,12 +52,13 @@ class SinglyLinkedList:
 
     def __str__(self):
         """make it printable"""
-
+        
+        prnt = ""
         ptr = self.__head
         while ptr:
-            print(ptr.data)
+            prnt += str(ptr.data) + "\n"
             ptr = ptr.next_node
-        return ""
+        return prnt
 
     def sorted_insert(self, value):
         """a soted insetion"""
