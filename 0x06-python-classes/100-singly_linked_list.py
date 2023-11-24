@@ -48,13 +48,13 @@ class SinglyLinkedList:
     def __init__(self):
         """initialize the head"""
 
-        self.__head = None
+        self.head = None
 
     def __str__(self):
         """make it printable"""
 
         prnt = ""
-        ptr = self.__head
+        ptr = self.head
         while ptr:
             prnt += str(ptr.data) + "\n"
             ptr = ptr.next_node
@@ -64,13 +64,13 @@ class SinglyLinkedList:
         """a soted insetion"""
 
         self.new_node = Node(value)
-        if self.__head is None:
-            self.__head = self.new_node
-        elif self.__head.data >= self.new_node.data:
-            self.new_node.next_node = self.__head
-            self.__head = self.new_node
+        if self.head is None:
+            self.head = self.new_node
+        elif self.head.data >= self.new_node.data:
+            self.new_node.next_node = self.head
+            self.head = self.new_node
         else:
-            ptr = self.__head
+            ptr = self.head
             while ptr.next_node and ptr.next_node.data < self.new_node.data:
                 ptr = ptr.next_node
             self.new_node.next_node = ptr.next_node
