@@ -61,7 +61,10 @@ class SinglyLinkedList:
         return prnt[:-1]
 
     def sorted_insert(self, value):
-        """a soted insetion"""
+        """a soted insetion
+        Args:
+            value: value to be inserted
+        """
 
         new_node = Node(value)
         if self.head is None:
