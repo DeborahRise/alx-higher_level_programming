@@ -8,10 +8,11 @@ An class Rectangle
 class Rectangle:
     """ Type: This class, defines a Rectangle"""
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """ instantiation of class """
-        type(self).number_of_instances += 1
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -53,7 +54,7 @@ class Rectangle:
         to_str = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                to_str += '#'
+                to_str += Rectangle.print_symbol
             if i != self.__height - 1:
                 to_str += '\n'
         return (to_str)
@@ -64,7 +65,5 @@ class Rectangle:
         return (rectangle)
 
     def __del__(self):
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-
-
