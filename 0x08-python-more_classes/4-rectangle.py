@@ -57,4 +57,6 @@ class Rectangle:
         return (to_str)
 
     def __repr__(self):
-        return f"Rectangle({self.__height}, {self.__width})"
+        rectangle = "Rectangle(" + str(self.__width)
+        rectangle = rectangle + ", " + str(self.__height) + ")"
+        return (rectangle)
