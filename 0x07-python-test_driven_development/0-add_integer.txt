@@ -1,0 +1,53 @@
+=================================
+Tests a function that adds 2 nums
+=================================
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(2, 3)
+5
+>>> add_integer('a', 'b')
+Traceback (innermost last):
+TypeError: a must be an integer
+
+>>> add_integer(2, 'int')
+Traceback (innermost last):
+TypeError: b must be an integer
+
+>>> add_integer('int', 3)
+Traceback (innermost last):
+TypeError: a must be an integer
+
+>>> add_integer(2.5, 4)
+6
+
+>>> add_integer(a, b)
+Traceback (most recent call last):
+NameError: name 'a' is not defined
+
+>>> add_integer(3, -7)
+-4
+
+>>> add_integer(-1, -1)
+-2
+
+>>> add_integer(-5, 5)
+0
+
+>>> add_integer(2)
+100
+
+>>> add_integer(None)
+Traceback (innermost last):
+TypeError: a must be an integer
+
+>>> add_integer(int, float)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(3.3, float('inf'))
+Traceback (innermost last):
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(float('NaN'))
+Traceback (innermost last):
+ValueError: cannot convert float NaN to integer
