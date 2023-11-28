@@ -10,9 +10,10 @@ def validate():
         print("Usage: nqueens N")
         sys.exit(1)
 
-    N = int(sys.argv[1])
-    if not isinstance(N, int):
-        raise TypeError("N must be a number")
+    if sys.argv[1].isdigit():
+        N = int(sys.argv[1])
+    else:
+        print("N must be a number")
         sys.exit(1)
 
     if N < 4:
