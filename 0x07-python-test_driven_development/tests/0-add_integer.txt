@@ -1,13 +1,24 @@
+0-add_integer
 =================================
 Tests a function that adds 2 nums
 =================================
 
+Importing fnction from the module:
+
 >>> add_integer = __import__('0-add_integer').add_integer
+
+Tests for positive numbers
+
 >>> add_integer(2, 3)
 5
+
+Tests for characters
+
 >>> add_integer('a', 'b')
 Traceback (innermost last):
 TypeError: a must be an integer
+
+Tests for an int and an 'int'
 
 >>> add_integer(2, 'int')
 Traceback (innermost last):
@@ -17,32 +28,40 @@ TypeError: b must be an integer
 Traceback (innermost last):
 TypeError: a must be an integer
 
+Tests for floats
 >>> add_integer(2.5, 4)
 6
 
+Tests for variables
 >>> add_integer(a, b)
 Traceback (most recent call last):
 NameError: name 'a' is not defined
 
+Tests for a negative and positive number
 >>> add_integer(3, -7)
 -4
 
+Tests for 2 negatives
 >>> add_integer(-1, -1)
 -2
 
 >>> add_integer(-5, 5)
 0
 
+Tests for single digit, with default b = 98
 >>> add_integer(2)
 100
+
 
 >>> add_integer(None)
 Traceback (innermost last):
 TypeError: a must be an integer
 
+
 >>> add_integer(int, float)
 Traceback (most recent call last):
 TypeError: a must be an integer
+
 
 >>> add_integer(3.3, float('inf'))
 Traceback (innermost last):

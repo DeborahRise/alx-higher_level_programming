@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Matrix_mul module
+A Matrix_mul module
 Function that multiplies two matrix
 
 """
@@ -9,8 +9,8 @@ Function that multiplies two matrix
 def matrix_mul(m_a, m_b):
     """Return: a nex matrix with the product of m_a and m_b
     Args:
-    param1: m_a type list of list is a matrix
-    param2: m_b type list of list is a matrix
+    Arg1: m_a type list of list is a matrix
+    Arg2: m_b type list of list is a matrix
     Raise: TypeError, ValueError
     """
     if not isinstance(m_a, list):
