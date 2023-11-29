@@ -13,7 +13,7 @@ def add_integer(a, b=98):
     Args:
         a: arg 1
         b: arg 2
-    Returns: 
+    Returns:
         the result
     Raises:
         a TypeError if not an integer or float
