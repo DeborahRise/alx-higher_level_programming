@@ -5,6 +5,7 @@ if the object is an instance of a class that inherited
 otherwise False
 """
 
+
 def inherits_from(obj, a_class):
     """ The function
     Args:
