@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-class MyList(list):
+""" This module prints in ascending order"""
 
+
+class MyList(list):
     """ This class inherits from list class """
 
     def print_sorted(self):
