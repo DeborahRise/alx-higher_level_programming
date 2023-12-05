@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Crates an Object 
+"""Crates an Object
 from a JSON file
 """
 
