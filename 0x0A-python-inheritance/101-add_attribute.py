@@ -3,10 +3,13 @@
 """
 
 
-def add_attribute(obj, attribute, value):
+def add_attribute(obj, name, value):
     """ The method or function
+    adds new attribute to an object
+    if possible
+    else: raise TypeError
     """
 
-    if not hasattr(obj, "__dict__"):
+    if "__dict__" not in dir(obj) or "__slots__" in dir(obj):
         raise TypeError("can't add new attribute")
-    setattr(obj, attribute, value)
+    setattr(obj, name, value)
