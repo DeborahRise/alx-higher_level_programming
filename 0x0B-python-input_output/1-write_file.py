@@ -2,6 +2,7 @@
 """ writing a string to a text file
 """
 
+
 def write_file(filename="", text=""):
     """ Must use with statement
     no file permission
