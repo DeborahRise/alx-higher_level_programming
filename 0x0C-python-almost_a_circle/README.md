@@ -2,11 +2,11 @@
 
 The AirBnB project is a big part of the Higher level curriculum. This project helped me be ready for it.
 
-## In this project, I reviewed everything about Python:
+## In this project, I reviewed everything about Python :snake:
 
-Import
-Exceptions
-Class
+* Import
+*Exceptions
+* Class
 Private attribute
 Getter/Setter
 Class method
