@@ -46,7 +46,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(sqr.y, 2)
 
     def setUp(self):
-        self.square = Square(10, 2, 1)
+        self.square = Square(10, 2, 1, 8)
 
     def test_to_dictionary(self):
         square_dict = self.square.to_dictionary()

@@ -5,8 +5,11 @@ Base Class
 
 
 import unittest
-from models.rectangle import Rectangle
 from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
+import json
+import inspect
 
 
 class TestBase(unittest.TestCase):
