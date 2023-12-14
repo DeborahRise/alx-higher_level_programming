@@ -18,27 +18,27 @@ class Rectangle(Base):
         method
         """
 
-        if not isinstance(width, int):
-            raise TypeError("width must be an integer")
-        if not isinstance(height, int):
-            raise TypeError("height must be an integer")
-        if width <= 0:
-            raise ValueError("width must be > 0")
-        if height <= 0:
-            raise ValueError("width must be > 0")
-        self.__width = width
-        self.__height = height
-        if not isinstance(x, int):
-            raise TypeError("x must be an integer")
-        if not isinstance(y, int):
-            raise TypeError("y must be an integer")
-        if x < 0:
-            raise ValueError("x must be >= 0")
-        if y < 0:
-            raise ValueError("y must be >= 0")
+        # if not isinstance(width, int):
+        #     raise TypeError("width must be an integer")
+        # if not isinstance(height, int):
+        #     raise TypeError("height must be an integer")
+        # if width <= 0:
+        #     raise ValueError("width must be > 0")
+        # if height <= 0:
+        #     raise ValueError("width must be > 0")
+        self.width = width
+        self.height = height
+        # if not isinstance(x, int):
+        #     raise TypeError("x must be an integer")
+        # if not isinstance(y, int):
+        #     raise TypeError("y must be an integer")
+        # if x < 0:
+        #     raise ValueError("x must be >= 0")
+        # if y < 0:
+        #     raise ValueError("y must be >= 0")
 
-        self.__x = x
-        self.__y = y
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     @property
@@ -51,7 +51,7 @@ class Rectangle(Base):
     def width(self, value):
         """private setter width"""
 
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -67,7 +67,7 @@ class Rectangle(Base):
     def height(self, value):
         """private setter height"""
 
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -83,7 +83,7 @@ class Rectangle(Base):
     def x(self, value):
         """private setter x"""
 
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
@@ -99,7 +99,7 @@ class Rectangle(Base):
     def y(self, value):
         """private setter y"""
 
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
@@ -157,6 +157,6 @@ class Rectangle(Base):
                 'id': self.id,
                 'width': self.__width,
                 'height': self.__height,
-                'x': self.__y,
+                'x': self.__x,
                 'y': self.__y
                 }
