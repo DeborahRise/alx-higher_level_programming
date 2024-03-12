@@ -13,6 +13,9 @@ if (args.length <= 3) {
       secNum = largeNum;
       largeNum = args[i];
     }
+	if (args[i] > secNum && args[i] < largeNum) {
+	  secNum = args[i];
+	}
   }
   console.log(secNum);
 }
