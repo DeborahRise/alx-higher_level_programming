@@ -14,8 +14,8 @@ if (args.length <= 3) {
       secNum = largeNum;
       largeNum = currentNum;
     } else if (currentNum > secNum && currentNum < largeNum) {
-      secNum = currentNum;
-    }
+      secNum = currentNum ;
+	}
   }
   console.log(secNum);
 }
