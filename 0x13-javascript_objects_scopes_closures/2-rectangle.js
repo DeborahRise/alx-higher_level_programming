@@ -6,8 +6,8 @@ class Rectangle {
       this.width = w;
       this.height = h;
     } else {
-      const Rectangle = {};
-
+      this.width = undefined;
+      this.height = undefined;
       /*  if (Number(w) <= 0 || Number(h) <= 0) {
     let Rectangle = new object(); */
     }
