@@ -17,15 +17,31 @@ class Rectangle {
       console.log(toPrint);
     }
   }
+
   rotate () {
-    let temp = Number(this.height);
+    const temp = Number(this.height);
     this.height = Number(this.width);
     this.width = temp;
   }
+
   double () {
     this.width *= 2;
     this.height *= 2;
   }
 }
 
-module.exports = Rectangle;
+class Square extends Rectangle {
+  constructor (size) {
+    super(size, size);
+  }
+
+  print () {
+    super.print();
+  }
+
+  double () {
+    super.double();
+  }
+}
+
+module.exports = Square;
