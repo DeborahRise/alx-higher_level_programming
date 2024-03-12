@@ -1,12 +1,13 @@
 #!/usr/bin/node
 
-function factorial (a) {
+function factorial(a) {
   if (isNaN(a)) {
     return 1;
   }
+
   const numA = parseInt(a);
   if (numA <= 1) {
-	  return 1;
+    return 1;
   }
 
   return numA * factorial(numA - 1);
