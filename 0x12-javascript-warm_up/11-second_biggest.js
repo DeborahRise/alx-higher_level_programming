@@ -9,12 +9,12 @@ if (args.length <= 3) {
   let secNum = 0;
 
   for (let i = 2; i < args.length; i++) {
-    if (args[i] > largeNum) {
+    const currentNum = Number(args[i]);
+    if (currentNum > largeNum) {
       secNum = largeNum;
-      largeNum = args[i];
-    }
-    if (args[i] > secNum && args[i] < largeNum) {
-      secNum = args[i];
+      largeNum = currentNum;
+    } else if (currentNum > secNum && currentNum < largeNum) {
+      secNum = currentNum;
     }
   }
   console.log(secNum);
