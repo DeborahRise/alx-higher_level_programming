@@ -6,7 +6,7 @@ class Rectangle {
       this.width = w;
       this.height = h;
     } else {
-      const Rectangle = {};
+      console.log('Rectangle {}');
 
       /*  if (Number(w) <= 0 || Number(h) <= 0) {
     let Rectangle = new object(); */
