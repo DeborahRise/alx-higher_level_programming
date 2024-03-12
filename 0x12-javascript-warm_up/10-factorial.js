@@ -16,7 +16,7 @@ function factorial (a) {
 const a = process.argv[2];
 
 if (a === undefined || isNaN(a)) {
-  console.log('NaN');
+  console.log(1);
 } else {
   console.log(factorial(a));
 }
