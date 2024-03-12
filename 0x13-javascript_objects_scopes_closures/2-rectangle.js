@@ -5,12 +5,11 @@ class Rectangle {
     if (w > 0 && h > 0 && Number.isInteger(w) && Number.isInteger(h)) {
       this.width = w;
       this.height = h;
-    } else {
-      this.width = undefined;
-      this.height = undefined;
-      /*  if (Number(w) <= 0 || Number(h) <= 0) {
-    let Rectangle = new object(); */
-    }
+    } /* else {
+        return {};
+/*  if (Number(w) <= 0 || Number(h) <= 0) {
+    let Rectangle = new object();
+    } */
   }
 }
 
