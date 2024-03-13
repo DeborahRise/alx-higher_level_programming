@@ -8,11 +8,14 @@ class Rectangle {
     }
   }
 
-  print () {
+  print (c) {
+    if (c === undefined) {
+      c = 'X';
+    }
     for (let i = 0; i < Number(this.height); i++) {
       let toPrint = '';
       for (let j = 0; j < Number(this.width); j++) {
-        toPrint += 'X';
+        toPrint += c;
       }
       console.log(toPrint);
     }
@@ -35,8 +38,8 @@ class Square extends Rectangle {
     super(size, size);
   }
 
-  print () {
-    super.print();
+  print (c) {
+    super.print(c);
   }
 
   double () {
