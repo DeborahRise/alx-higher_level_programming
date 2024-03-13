@@ -1,14 +1,7 @@
 #!/usr/bin/node
 
-class Rectangle {
-  constructor (w, h) {
-    if (w > 0 && h > 0 && Number.isInteger(w) && Number.isInteger(h)) {
-      this.width = w;
-      this.height = h;
-    }
-  }
-
-  print (c) {
+module.exports = class Square extends require('./5-square') {
+  charPrint (c) {
     if (c === undefined) {
       c = 'X';
     }
@@ -20,42 +13,4 @@ class Rectangle {
       console.log(toPrint);
     }
   }
-
-  rotate () {
-    const temp = Number(this.height);
-    this.height = Number(this.width);
-    this.width = temp;
-  }
-
-  double () {
-    this.width *= 2;
-    this.height *= 2;
-  }
-}
-
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-
-  charPrint (c) {
-    super.print(c);
-  }
-
-  double () {
-    super.double();
-  }
-}
-
-/*
-class Square2 extends Square {
-  constructor (size) {
-    super(size, size);
-  }
-
-  charPrint (c) {
-    super.print(c);
-  }
-} */
-
-module.exports = Square;
+};
