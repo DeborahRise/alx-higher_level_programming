@@ -38,7 +38,7 @@ class Square extends Rectangle {
     super(size, size);
   }
 
-  print (c) {
+  charPrint (c) {
     super.print(c);
   }
 
@@ -47,6 +47,7 @@ class Square extends Rectangle {
   }
 }
 
+/*
 class Square2 extends Square {
   constructor (size) {
     super(size, size);
@@ -55,6 +56,6 @@ class Square2 extends Square {
   charPrint (c) {
     super.print(c);
   }
-}
+} */
 
-module.exports = Square2;
+module.exports = Square;
