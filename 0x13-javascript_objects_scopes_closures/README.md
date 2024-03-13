@@ -1,6 +1,6 @@
 # 0x13. JavaScript - Objects, Scopes and Closures
 
-## Learning Objectives
+### Learning Objectives
 
 How to create an object in JavaScript
 What this means
