@@ -17,23 +17,23 @@ class Rectangle {
       console.log(toPrint);
     }
   }
+
   rotate () {
-    let temp = Number(this.height);
+    const temp = Number(this.height);
     this.height = Number(this.width);
     this.width = temp;
   }
+
   double () {
     this.width *= 2;
     this.height *= 2;
   }
 }
 
-
 class Square extends Rectangle {
   constructor (size) {
-    super(size, size)
+    super(size, size);
   }
-
 
   print () {
     super.print();
@@ -44,4 +44,15 @@ class Square extends Rectangle {
   }
 }
 
-module.exports = Square;
+class Square2 extends Square {
+  constructor (size) {
+    super(size, size);
+  }
+
+  charPrint (c) {
+    super.print(c);
+    // toPrint += c;
+  }
+}
+
+module.exports = Square2;
