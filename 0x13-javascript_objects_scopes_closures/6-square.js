@@ -49,7 +49,7 @@ class Square extends Rectangle {
 
 class Square2 extends Square {
   constructor (size) {
-    super(size);
+    super(size, size);
   }
 
   charPrint (c) {
