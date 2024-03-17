@@ -17,13 +17,11 @@ if __name__ == "__main__":
         passwd=sys.argv[2],
         db=sys.argv[3]
         )
-
     cur = db.cursor()
+    state_name = sys.argv[4]
 
-    filter_by = 'N%'
-
-    cur.execute("""SELECT * FROM states WHERE name LIKE %s
-            ORDER BY id ASC""", (filter_by,))
+    cur.execute("""SELECT * FROM states WHERE name = %s
+            ORDER BY id ASC""", (state_name,))
 
     rows = cur.fetchall()
 
