@@ -6,10 +6,10 @@ script should take 3 arguments:
 mysql username, mysql password and database name
 script should connect to a MySQL server running on localhost at port 3306
 """
+import sys
+import MySQLdb
 
 if __name__ == "__main__":
-    import sys
-    import MySQLdb
     db = MySQLdb.connect(
         user=sys.argv[1],
         passwd=sys.argv[2],
@@ -20,8 +20,7 @@ if __name__ == "__main__":
 
     filter_by = 'N%'
 
-    cur.execute("""SELECT *
-            FROM states WHERE name LIKE %s
+    cur.execute("""SELECT * FROM states WHERE name LIKE %s
             ORDER BY id ASC""", (filter_by,))
 
     rows = cur.fetchall()
