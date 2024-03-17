@@ -18,11 +18,11 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    filter_by = 'N'
+    filter_by = 'N%'
 
     cur.execute("""SELECT *
             FROM states WHERE name LIKE %s
-            ORDER BY id ASC""", (f'{filter_by}%',))
+            ORDER BY id ASC""", (filter_by,))
 
     rows = cur.fetchall()
 
