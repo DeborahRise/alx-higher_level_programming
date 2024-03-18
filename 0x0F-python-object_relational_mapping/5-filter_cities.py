@@ -20,9 +20,9 @@ if __name__ == "__main__":
     state_name = sys.argv[4]
 
     query = """
-        SELECT cities.name
+        SELECT *
         FROM cities
-        INNER JOIN states ON cities.state_id = states.id
+        JOIN states ON cities.state_id = states.id
         WHERE states.name = %s
         ORDER BY cities.id ASC
         """
