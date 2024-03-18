@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     filter_by = 'N%'
 
-    cur.execute("""SELECT * FROM states WHERE name LIKE %s
+    cur.execute("""SELECT * FROM states WHERE name LIKE BINARY %s
             ORDER BY id ASC""", (filter_by,))
 
     rows = cur.fetchall()
