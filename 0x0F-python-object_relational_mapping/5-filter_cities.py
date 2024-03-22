@@ -32,8 +32,9 @@ if __name__ == "__main__":
 
     rows = cur.fetchall()
 
-    for row in rows:
-        print(row)
+    cities = [row[0] for row in rows]
+    result = ", ".join(cities)
+    print(result)
 
     cur.close()
     db.close()
