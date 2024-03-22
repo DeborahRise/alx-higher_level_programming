@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 
-""" a script that lists all State objects
+"""A script that lists all State objects
 from the database hbtn_0e_6_usa"""
-
 
 import sys
 from sqlalchemy import create_engine
@@ -24,4 +23,4 @@ if __name__ == '__main__':
             is_here = True
             break
     if is_here is False:
-            print('Not found')
+        print('Not found')
