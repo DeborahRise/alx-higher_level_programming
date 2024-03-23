@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 
-""" a script that lists all State objects
-from the database hbtn_0e_6_usa"""
+"""
+a script that lists all State objects
+from the database hbtn_0e_6_usa
+"""
 
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from relationship_state import State
-from relationship_city import City, Base
+from relationship_state import Base, State
+from relationship_city import City
 
 if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
@@ -18,13 +20,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-
-    """ session.add(City(name="San Francisco", state=State(name="California")))
-    """
-    california = State(name="California")
-    session.add(california)
-    session.commit()
-
-    san_francisco = City(name="San Francisco", state=california)
-    session.add(san_francisco)
+    new_state = State(name='California')
+    new_city = City(name="San Francisco", state=new_state)
+    session.add(new_state, new_city)
     session.commit()
