@@ -14,6 +14,6 @@ url = sys.argv[1]
 
 with urllib.request.urlopen(url) as response:
     # Check if 'X-Request-Id is present in the responseheader
-    if 'X-Request-Id' in response.headers:
-        request_id = response.headers['X-Request-Id']
+    if 'X-Request-Id' in response.header:
+        request_id = response.header['X-Request-Id']
         print(request_id)
