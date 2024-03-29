@@ -13,6 +13,7 @@ a personal access token as password)
 """
 
 import requests
+from requests.auth import HTTPBasicAuth
 import sys
 
 if __name__ == '__main__':
@@ -22,14 +23,7 @@ if __name__ == '__main__':
     # Github endpoint for user info
     url = 'https://api.github.com/user'
 
-    auth = (username, token)
+    auth = HTTPBasicAuth(username, token)
 
     response = requests.get(url, auth=auth)
-
-    # check if request was succesful(status code 200)
-
-    if response.status_code == 200:
-        user_info = response.json()
-        print(f"{user_info.get('id')}")
-    else:
-        print(response.status_code)
+    print(response.json().get('id'))
