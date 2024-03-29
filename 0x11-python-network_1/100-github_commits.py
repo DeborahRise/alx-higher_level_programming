@@ -30,6 +30,7 @@ if __name__ == '__main__':
         for i in range(10):
             print("{}: {}".format(
                 commits[i].get('sha'),
-                commits[i].get('commit').get('author').get(''nameb)
+                commits[i].get('commit').get('author').get('name')
                 ))
-    print(response.json().get('id'))
+    except:
+        pass
