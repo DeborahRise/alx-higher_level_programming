@@ -6,7 +6,6 @@
  * If an error occurred during the reading, print the error object
  */
 
-
 const fs = require('fs');
 
 // Check if file path is provided as an argument
