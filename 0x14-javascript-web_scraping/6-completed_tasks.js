@@ -4,6 +4,7 @@
  */
 
 const request = require('request');
+
 // Check if API URL is provided as an argument
 if (process.argv.length < 3) {
   console.error('Usage: node completed_tasks.js <api_url>');
@@ -34,10 +35,11 @@ request.get(apiUrl, (error, response, body) => {
       });
 
       // Print users with completed tasks
-      //console.log('Users with completed tasks:');
-      Object.keys(completedTasksByUser).forEach(userId => {
-        console.log(`'${userId}': ${completedTasksByUser[userId]},`);
+      console.log('{');
+      Object.keys(completedTasksByUser).forEach((userId, index, array) => {
+        console.log(`  '${userId}': ${completedTasksByUser[userId]}${index === array.length - 1 ? '' : ','}`);
       });
-    } 
+      console.log('}');
+    }
   }
 });
