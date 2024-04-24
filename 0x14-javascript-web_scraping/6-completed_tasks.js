@@ -1,21 +1,43 @@
 #!/usr/bin/node
 /**
- * Write a script that   prints the number of movies where
+ * Write a script that computes the number of tasks completed by user id.
  */
 
 const request = require('request');
-const fs = require('fs');
-const url = process.argv[2];
-const file = process.argv[3];
+// Check if API URL is provided as an argument
+if (process.argv.length < 3) {
+  console.error('Usage: node completed_tasks.js <api_url>');
+  process.exit(1);
+}
 
-request(url, (error, response, body) => {
+// Extract API URL from command line arguments
+const apiUrl = process.argv[2];
+
+// Send GET request to the JSONPlaceholder API to fetch todos
+request.get(apiUrl, (error, response, body) => {
   if (error) {
-    console.log(error);
+    console.error(error);
   } else {
-    fs.writeFile(file, body, 'utf8', (error) => {
-      if (error) {
-        console.log(error);
-      }
-    });
+    if (response.statusCode === 200) {
+      const todos = JSON.parse(body);
+      const completedTasksByUser = {};
+
+      // Iterate over todos to count completed tasks for each user
+      todos.forEach(todo => {
+        if (todo.completed) {
+          if (completedTasksByUser[todo.userId]) {
+            completedTasksByUser[todo.userId]++;
+          } else {
+            completedTasksByUser[todo.userId] = 1;
+          }
+        }
+      });
+
+      // Print users with completed tasks
+      //console.log('Users with completed tasks:');
+      Object.keys(completedTasksByUser).forEach(userId => {
+        console.log(`'${userId}': ${completedTasksByUser[userId]},`);
+      });
+    } 
   }
 });
